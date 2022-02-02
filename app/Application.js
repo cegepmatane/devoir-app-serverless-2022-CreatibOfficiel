@@ -14,23 +14,23 @@
     this.recipeDAO = recipeDAO;
 
     // C'est l'équivalent de function(){this.naviguer()}
-    this.window.addEventListener("hashchange", () =>this.naviguer());
+    this.window.addEventListener("hashchange", () => this.naviguer());
 
     this.naviguer();
   }
 
-  naviguer(){
+  naviguer() {
     let hash = window.location.hash;
 
-    if(!hash){
+    if (!hash) {
 
       this.recipeDAO.lister((listRecipe) => this.showNewListRecipe(listRecipe));
 
-    }else if(hash.match(/^#ajouter-cadeau/)){
+    } else if (hash.match(/^#ajouter-cadeau/)) {
 
       this.viewAddRecipe.afficher();
 
-    }else{
+    } else {
 
       let navigation = hash.match(/^#cadeau\/([0-9]+)/);
       let idRecipe = navigation[1];

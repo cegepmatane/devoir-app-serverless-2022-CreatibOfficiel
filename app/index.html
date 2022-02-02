@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html>
+
 <head>
   <title>Liste de cadeaux</title>
   <link rel="stylesheet" href="decoration/application.css">
@@ -17,6 +18,7 @@
   <script defer src="Application.js"></script>
 
 </head>
+
 <body>
   <div id="page-chargement-application">Chargement de l'application liste de cadeaux</div>
 
@@ -44,32 +46,35 @@
   </script>
 
   <script type="plain/text" id="html-vue-ajouter-cadeau">
-  <div class="page">
-    <h1>Ajouter un cadeau de Noël</h1>
-    <form id="formulaire-ajouter">
-      <fieldset>
-        <legend>Identification du cadeau</legend>
+    <div class="page">
+      <h1>Add a new recipe</h1>
+      <form id="adding-form">
         <div>
-          <label for="cadeau-nom">Nom</label>
-          <input type="text" id="cadeau-nom"/>
+          <label for="recipe-name">Recipe name</label>
+          <input type="text" id="recipe-name" />
         </div>
         <div>
-          <label for="cadeau-marque">Marque</label>
-          <input type="text" id="cadeau-marque"/>
+          <label for="recipe-cooking">Cooking time</label>
+          <input type="number" id="recipe-cooking-time" />
         </div>
-      </fieldset>
-      <fieldset>
-        <legend>D&eacute;tails sur le cadeau</legend>
         <div>
-          <label for="cadeau-description">Description</label>
+          <label for="recipe-baking">Baking time</label>
+          <input type="number" id="recipe-cooking-time" />
+        </div>
+        <div>
+          <label for="recipe-ingredients">Ingredients list</label>
           <textarea id="cadeau-description"></textarea>
         </div>
-      </fieldset>
-      <input class="action" type="submit" id="enregistrer" value="Enregistrer"/>
-    </form>
-    <a href="#" class="action">Annuler et revenir &agrave; la liste</a>
-  </div>
+        <div>
+          <label for="recipe-steps">Steps</label>
+          <textarea id="cadeau-description"></textarea>
+        </div>
+        <input class="action" type="submit" id="enregistrer" value="Save" />
+      </form>
+      <a href="#" class="action">Cancel</a>
+    </div>
   </script>
 
 </body>
+
 </html>
