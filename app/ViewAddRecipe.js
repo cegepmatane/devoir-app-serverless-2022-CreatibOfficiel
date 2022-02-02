@@ -1,19 +1,19 @@
 ﻿class ViewAddRecipe {
-  constructor(){
-    this.html = document.getElementById("html-vue-ajouter-cadeau").innerHTML;
+  constructor() {
+    this.html = document.getElementById("html-addingView").innerHTML;
     this.addRecipe = null;
   }
 
-  initAddRecipe(addRecipe){
+  initAddRecipe(addRecipe) {
     this.addRecipe = addRecipe;
   }
 
-  afficher(){
+  afficher() {
     document.getElementsByTagName("body")[0].innerHTML = this.html;
-    document.getElementById("formulaire-ajouter").addEventListener("submit",evenement =>this.enregistrer(evenement));
+    document.getElementById("formulaire-ajouter").addEventListener("submit", evenement => this.enregistrer(evenement));
   }
 
-  enregistrer(evenement){
+  enregistrer(evenement) {
     evenement.preventDefault();
 
     let nom = document.getElementById("cadeau-nom").value;

@@ -1,6 +1,5 @@
 ﻿class Application {
-  constructor(window, viewListRecipe, viewRecipe, viewAddRecipe, recipeDAO){
-
+  constructor(window, viewListRecipe, viewRecipe, viewAddRecipe, recipeDAO) {
     this.window = window;
 
     this.viewListRecipe = viewListRecipe;
@@ -9,7 +8,7 @@
 
     this.viewAddRecipe = viewAddRecipe;
     // C'est l'équivalent de function(recipe){this.addRecipe(recipe)}
-    this.viewAddRecipe.initAddRecipe(recipe =>this.addRecipe(recipe));
+    this.viewAddRecipe.initAddRecipe(recipe => this.addRecipe(recipe));
 
     this.recipeDAO = recipeDAO;
 
@@ -26,7 +25,7 @@
 
       this.recipeDAO.lister((listRecipe) => this.showNewListRecipe(listRecipe));
 
-    } else if (hash.match(/^#ajouter-cadeau/)) {
+    } else if (hash.match(/^#adding/)) {
 
       this.viewAddRecipe.afficher();
 
@@ -39,24 +38,24 @@
     }
   }
 
-  showNewListRecipe(listRecipe){
+  showNewListRecipe(listRecipe) {
 
     console.log(listRecipe);
     this.viewListRecipe.initListRecipe(listRecipe);
     this.viewListRecipe.afficher();
   }
 
-  showNewRecipe(recipe){
+  showNewRecipe(recipe) {
     console.log(recipe);
     this.viewRecipe.initRecipe(recipe);
     this.viewRecipe.afficher();
   }
 
-  addRecipe(recipe){
+  addRecipe(recipe) {
     this.recipeDAO.ajouter(recipe, () => this.showListRecipe());
   }
 
-  showListRecipe(){
+  showListRecipe() {
     this.window.location.hash = "#";
   }
 }
