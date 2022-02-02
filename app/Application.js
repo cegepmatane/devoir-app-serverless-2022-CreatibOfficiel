@@ -9,7 +9,7 @@
 
     this.viewAddRecipe = viewAddRecipe;
     // C'est l'équivalent de function(recipe){this.addRecipe(recipe)}
-    this.viewAddRecipe.initialiserAjouterCadeau(recipe =>this.addRecipe(recipe));
+    this.viewAddRecipe.initAddRecipe(recipe =>this.addRecipe(recipe));
 
     this.recipeDAO = recipeDAO;
 
