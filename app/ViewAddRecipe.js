@@ -1,11 +1,11 @@
 ﻿class ViewAddRecipe {
   constructor(){
     this.html = document.getElementById("html-vue-ajouter-cadeau").innerHTML;
-    this.ajouterCadeau = null;
+    this.addRecipe = null;
   }
 
-  initialiserAjouterCadeau(ajouterCadeau){
-    this.ajouterCadeau = ajouterCadeau;
+  initAddRecipe(addRecipe){
+    this.addRecipe = addRecipe;
   }
 
   afficher(){
@@ -20,7 +20,7 @@
     let marque = document.getElementById("cadeau-marque").value;
     let description = document.getElementById("cadeau-description").value;
 
-    this.ajouterCadeau(new Recipe(nom, marque, description, null));
+    this.addRecipe(new Recipe(nom, marque, description, null));
 
   }
 

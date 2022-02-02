@@ -1,17 +1,17 @@
 ﻿class Application {
-  constructor(window, vueListeCadeau, vueCadeau, vueAjouterCadeau, cadeauDAO){
+  constructor(window, viewListRecipe, viewRecipe, viewAddRecipe, recipeDAO){
 
     this.window = window;
 
-    this.vueListeCadeau = vueListeCadeau;
+    this.viewListRecipe = viewListRecipe;
 
-    this.vueCadeau = vueCadeau;
+    this.viewRecipe = viewRecipe;
 
-    this.vueAjouterCadeau = vueAjouterCadeau;
-    // C'est l'équivalent de function(cadeau){this.ajouterCadeau(cadeau)}
-    this.vueAjouterCadeau.initialiserAjouterCadeau(cadeau =>this.ajouterCadeau(cadeau));
+    this.viewAddRecipe = viewAddRecipe;
+    // C'est l'équivalent de function(recipe){this.addRecipe(recipe)}
+    this.viewAddRecipe.initialiserAjouterCadeau(recipe =>this.addRecipe(recipe));
 
-    this.cadeauDAO = cadeauDAO;
+    this.recipeDAO = recipeDAO;
 
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () =>this.naviguer());
@@ -24,39 +24,39 @@
 
     if(!hash){
 
-      this.cadeauDAO.lister((listeCadeau) => this.afficherNouvelleListeCadeau(listeCadeau));
+      this.recipeDAO.lister((listRecipe) => this.showNewListRecipe(listRecipe));
 
     }else if(hash.match(/^#ajouter-cadeau/)){
 
-      this.vueAjouterCadeau.afficher();
+      this.viewAddRecipe.afficher();
 
     }else{
 
       let navigation = hash.match(/^#cadeau\/([0-9]+)/);
-      let idCadeau = navigation[1];
+      let idRecipe = navigation[1];
 
-      this.cadeauDAO.chercher(idCadeau, (cadeau) => this.afficherNouveauCadeau(cadeau));
+      this.recipeDAO.chercher(idRecipe, (recipe) => this.showNewRecipe(recipe));
     }
   }
 
-  afficherNouvelleListeCadeau(listeCadeau){
+  showNewListRecipe(listRecipe){
 
-    console.log(listeCadeau);
-    this.vueListeCadeau.initialiserListeCadeau(listeCadeau);
-    this.vueListeCadeau.afficher();
+    console.log(listRecipe);
+    this.viewListRecipe.initListRecipe(listRecipe);
+    this.viewListRecipe.afficher();
   }
 
-  afficherNouveauCadeau(cadeau){
-    console.log(cadeau);
-    this.vueCadeau.initialiserCadeau(cadeau);
-    this.vueCadeau.afficher();
+  showNewRecipe(recipe){
+    console.log(recipe);
+    this.viewRecipe.initRecipe(recipe);
+    this.viewRecipe.afficher();
   }
 
-  ajouterCadeau(cadeau){
-    this.cadeauDAO.ajouter(cadeau, () => this.afficherListeCadeau());
+  addRecipe(recipe){
+    this.recipeDAO.ajouter(recipe, () => this.showListRecipe());
   }
 
-  afficherListeCadeau(){
+  showListRecipe(){
     this.window.location.hash = "#";
   }
 }

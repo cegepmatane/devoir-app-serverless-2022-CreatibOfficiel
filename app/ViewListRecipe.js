@@ -1,28 +1,28 @@
 ﻿class ViewListRecipe {
   constructor(){
     this.html = document.getElementById("html-vue-liste-cadeau").innerHTML;
-    this.listeCadeauDonnee = null;
+    this.listRecipeGiven = null;
   }
 
-  initialiserListeCadeau(listeCadeauDonnee){
-    this.listeCadeauDonnee = listeCadeauDonnee;
+  initListRecipe(listRecipeGiven){
+    this.listRecipeGiven = listRecipeGiven;
   }
 
   afficher(){
     document.getElementsByTagName("body")[0].innerHTML = this.html;
 
-    let listeCadeau = document.getElementById("liste-cadeau");
-    const listeCadeauItemHTML = listeCadeau.innerHTML;
-    let listeCadeauHTMLRemplacement = "";
+    let listRecipe = document.getElementById("liste-cadeau");
+    const listRecipeItemHTML = listRecipe.innerHTML;
+    let listRecipeHTMLReplacement = "";
 
-    for(var numeroCadeau in this.listeCadeauDonnee){
-      let listeCadeauItemHTMLRemplacement = listeCadeauItemHTML;
-      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Recipe.id}",this.listeCadeauDonnee[numeroCadeau].id);
-      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Recipe.nom}",this.listeCadeauDonnee[numeroCadeau].nom);
-      listeCadeauHTMLRemplacement += listeCadeauItemHTMLRemplacement;
+    for(var numberRecipe in this.listRecipeGiven){
+      let listRecipeItemHTMLReplacement = listRecipeItemHTML;
+      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.id}",this.listRecipeGiven[numberRecipe].id);
+      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.nom}",this.listRecipeGiven[numberRecipe].nom);
+      listRecipeHTMLReplacement += listRecipeItemHTMLReplacement;
     }
 
-    listeCadeau.innerHTML = listeCadeauHTMLRemplacement;
+    listRecipe.innerHTML = listRecipeHTMLReplacement;
   }
 
 }

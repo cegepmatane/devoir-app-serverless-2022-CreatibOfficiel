@@ -4,8 +4,8 @@
     this.cadeau = null;
   }
 
-  initialiserCadeau(cadeau){
-    this.cadeau = cadeau;
+  initRecipe(recipe){
+    this.cadeau = recipe;
   }
 
   afficher(){
