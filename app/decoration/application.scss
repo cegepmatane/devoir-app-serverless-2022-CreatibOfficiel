@@ -52,18 +52,26 @@ html {
 		font-size: 0.8rem;
 	}
 }
-.button {
-	display: inline-block;
-	padding: 0.2rem 0.4rem;
-	margin: 15px;
-	border: 0px;
-	border-radius: var(--theme-border-radius);
-	background: var(--theme-color-red);
-	color: var(--theme-color-text);
-	text-decoration: none;
-	font-family: 'BebasNeueRegular', sans-serif;
-	font-size: 1rem;
-	cursor: pointer;
+.button-wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 1rem;
+	.button {
+		display: inline-block;
+		padding: 0.2rem 0.4rem;
+		margin: 15px;
+		border: 0px;
+		border-radius: var(--theme-border-radius);
+		background: var(--theme-color-red);
+		color: var(--theme-color-text);
+		text-decoration: none;
+		font-family: 'BebasNeueRegular', sans-serif;
+		font-size: 1rem;
+		cursor: pointer;
+	}
 }
 .page {
 	position: relative;
@@ -72,6 +80,10 @@ html {
 	padding: 5%;
 	min-height: 100vh;
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 	h1 {
 		font-family: 'BebasNeueRegular', sans-serif;
 		font-size: 3rem;
@@ -84,6 +96,7 @@ html {
 		background-color: var(--theme-color-bg2);
 		border-radius: var(--theme-border-radius);
 		list-style: none;
+		width: 100%;
 		padding: 0;
 		margin: 15px;
 		display: flex;
@@ -95,6 +108,43 @@ html {
 				text-decoration: none;
 				color: var(--theme-color-text);
 				font-family: 'RobotoRegular', sans-serif;
+			}
+		}
+	}
+	form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.form-row {
+			input {
+				width: 100%;
+				padding: 0.5rem;
+				margin: 15px;
+				border: 0px;
+				border-radius: var(--theme-border-radius);
+				background: var(--theme-color-bg2);
+				color: var(--theme-color-text);
+				font-family: 'RobotoRegular', sans-serif;
+				font-size: 1rem;
+				cursor: pointer;
+				label {
+					display: block;
+					font-family: 'RobotoRegular', sans-serif;
+					font-size: 0.8rem;
+					color: var(--theme-color-text);
+				}
+				input,
+				text-area {
+					border: 0px;
+					border-radius: var(--theme-border-radius);
+					background: var(--theme-color-bg2);
+					color: var(--theme-color-text);
+					font-family: 'RobotoRegular', sans-serif;
+					font-size: 1rem;
+					cursor: pointer;
+				}
 			}
 		}
 	}

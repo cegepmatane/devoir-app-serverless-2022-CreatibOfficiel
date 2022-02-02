@@ -70,7 +70,25 @@ html {
   font-size: 0.8rem;
 }
 
-.button {
+.button-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.button-wrapper .button {
   display: inline-block;
   padding: 0.2rem 0.4rem;
   margin: 15px;
@@ -92,6 +110,19 @@ html {
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page h1 {
@@ -107,6 +138,7 @@ html {
   background-color: var(--theme-color-bg2);
   border-radius: var(--theme-border-radius);
   list-style: none;
+  width: 100%;
   padding: 0;
   margin: 15px;
   display: -webkit-box;
@@ -128,5 +160,53 @@ html {
   text-decoration: none;
   color: var(--theme-color-text);
   font-family: 'RobotoRegular', sans-serif;
+}
+
+.page form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page form .form-row input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 15px;
+  border: 0px;
+  border-radius: var(--theme-border-radius);
+  background: var(--theme-color-bg2);
+  color: var(--theme-color-text);
+  font-family: 'RobotoRegular', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.page form .form-row input label {
+  display: block;
+  font-family: 'RobotoRegular', sans-serif;
+  font-size: 0.8rem;
+  color: var(--theme-color-text);
+}
+
+.page form .form-row input input,
+.page form .form-row input text-area {
+  border: 0px;
+  border-radius: var(--theme-border-radius);
+  background: var(--theme-color-bg2);
+  color: var(--theme-color-text);
+  font-family: 'RobotoRegular', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=application.css.map */
