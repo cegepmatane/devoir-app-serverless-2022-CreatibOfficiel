@@ -25,7 +25,7 @@ Cette application est un client permettant d'éditer et de lister des recettes d
 
 Nous utilisons le framework javascript [Electron](https://www.electronjs.org/) pour la création de l'application.
 
-Les champs d'entré :
+Les champs d'entrée :
 - Nom de la recette
 - Temps de préparation
 - Temps de cuisson
