@@ -1,29 +1,27 @@
-﻿@import "normalize.css" ;
+﻿@import "normalize.css";
 
 @font-face {
-  font-family: 'Cream Cake';
-  src: url('font/cream_cake/Cream Cake.ttf')  format('truetype');
+  font-family: 'BebasNeueRegular';
+  src: url('font/Bebas_Neue/BebasNeue-Regular.ttf')  format('truetype');
 }
 
 @font-face {
-  font-family: 'Hello Christmas Icon';
-  src: url('font/hello_christmas_icons/Hello-Christmas-Icon-trial.ttf')  format('truetype');
+  font-family: 'RobotoRegular';
+  src: url('font/Roboto/Roboto-Regular.ttf')  format('truetype');
 }
 
 :root {
-  --theme-rouge: #fd341f;
-  --theme-blanc-transparent: rgba(255,255,255,0.3);
-  --theme-bleu-pale: rgba(151,219,246,1);
-  --theme-bleu-fonce: rgba(63,155,191,1);
-  --theme-vert: #408450;
-  --theme-blanc: white;
-  --theme-noir: black;
+  --palette-color-1: #861388;
+  --palette-color-2: #E15A97;
+  --palette-color-3: #EEABC4;
+  --palette-color-4: #C799A6;
+  --palette-color-5: #4B2840;
 
-  --theme-bordure-rondeur: 0.5rem;
+  --theme-border-radius: 5px;
 }
 
 html {
-  font-family:'Cream Cake', sans-serif;
+  font-family:'RobotoRegular', sans-serif;
   font-size:48px;
 }
 
@@ -42,7 +40,7 @@ html {
   display:block;
   margin-bottom:0.25rem;
   background-color:var(--theme-blanc-transparent);
-  border-radius:var(--theme-bordure-rondeur);
+  border-radius:var(--theme-border-radius);
   padding:0.25rem;
   padding-left:1.50rem;
   box-shadow: 2px 2px var(--theme-blanc);
@@ -59,7 +57,7 @@ html {
    height:1rem;
    width:1rem;
 
-   font-family:'Hello Christmas Icon', sans-serif;
+   font-family:'BebasNeueRegular', sans-serif;
 
 
 }
@@ -67,16 +65,17 @@ html {
 fieldset {
   color:var(--theme-rouge);
   border-color: var(--theme-rouge);
-  border-radius:var(--theme-bordure-rondeur);
+  border-radius:var(--theme-border-radius);
 }
 
 input[type="text"],
+input[type="number"],
 textarea {
   display:block;
   width:100%;
   border:none;
   background-color:var(--theme-blanc-transparent);
-  border-radius:var(--theme-bordure-rondeur);
+  border-radius:var(--theme-border-radius);
 }
 
 #page-chargement-application{
@@ -142,7 +141,7 @@ textarea {
 .page p {
   background-color:var(--theme-blanc-transparent);
   border:0px transparent solid;
-  border-radius:var(--theme-bordure-rondeur);
+  border-radius:var(--theme-border-radius);
   padding:0.25rem;
 }
 
@@ -155,7 +154,7 @@ textarea {
   background-color:#fd9f44;
   color:var(--theme-blanc);
   border:0px transparent solid;
-  border-radius:var(--theme-bordure-rondeur);
+  border-radius:var(--theme-border-radius);
   padding:0.25rem;
   font-size:1rem;
   text-align:center;
