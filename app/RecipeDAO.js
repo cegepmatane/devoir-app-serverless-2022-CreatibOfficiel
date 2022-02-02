@@ -8,7 +8,6 @@
         for (let position in data) {
           let recipe = new Recipe(data[position].name_of_recipe,
             data[position].time_of_preparation,
-            data[position].time_of_preparation,
             data[position].time_of_cook,
             data[position].list_of_ingredients,
             data[position].list_of_steps,
@@ -26,9 +25,11 @@
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        let recipe = new Recipe(data.nom,
-          data.marque,
-          data.description,
+        let recipe = new Recipe(data.name_of_recipe,
+          data.time_of_preparation,
+          data.time_of_cook,
+          data.list_of_ingredients,
+          data.list_of_steps,
           data.id);
         action(recipe);
       });
