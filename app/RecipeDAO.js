@@ -6,9 +6,19 @@
         console.log(data);
         let listRecipe = [];
         for (let position in data) {
-          let recipe = new Recipe(data[position].nom,
-            data[position].marque,
-            data[position].description,
+            /*
+                this.name_of_recipe = name_of_recipe;
+    this.time_of_preparation = time_of_preparation;
+    this.time_of_cook = time_of_cook;
+    this.list_of_ingredients = list_of_ingredients;
+    this.list_of_steps = list_of_steps;
+             */
+          let recipe = new Recipe(data[position].name_of_recipe,
+            data[position].time_of_preparation,
+            data[position].time_of_preparation,
+            data[position].time_of_cook,
+            data[position].list_of_ingredients,
+            data[position].list_of_steps,
             data[position].id);
 
           console.log(recipe);
