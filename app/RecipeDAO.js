@@ -6,13 +6,6 @@
         console.log(data);
         let listRecipe = [];
         for (let position in data) {
-            /*
-                this.name_of_recipe = name_of_recipe;
-    this.time_of_preparation = time_of_preparation;
-    this.time_of_cook = time_of_cook;
-    this.list_of_ingredients = list_of_ingredients;
-    this.list_of_steps = list_of_steps;
-             */
           let recipe = new Recipe(data[position].name_of_recipe,
             data[position].time_of_preparation,
             data[position].time_of_preparation,
@@ -41,8 +34,8 @@
       });
   }
 
-  ajouter(cadeau, action) {
-    console.log(JSON.stringify(cadeau));
+  ajouter(recipe, action) {
+    console.log(JSON.stringify(recipe));
     fetch('https://0igm350o8d.execute-api.us-east-1.amazonaws.com/default/ajouter',
       {
         method: 'POST',
