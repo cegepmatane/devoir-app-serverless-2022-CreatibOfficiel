@@ -1,13 +1,12 @@
-﻿@import "normalize.css";
-
+@import url(c:\Users\utilisateur\Documents\DUT\Sem 4\INFONUAGIQUE\devoir-app-serverless-2022-CreatibOfficiel\app\decoration\normalize.css);
 @font-face {
   font-family: 'BebasNeueRegular';
-  src: url('font/Bebas_Neue/BebasNeue-Regular.ttf')  format('truetype');
+  src: url("font/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'RobotoRegular';
-  src: url('font/Roboto/Roboto-Regular.ttf')  format('truetype');
+  src: url("font/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 :root {
@@ -16,156 +15,137 @@
   --palette-color-3: #EEABC4;
   --palette-color-4: #C799A6;
   --palette-color-5: #4B2840;
-
   --theme-border-radius: 5px;
 }
 
 html {
-  font-family:'RobotoRegular', sans-serif;
-  font-size:48px;
+  font-family: 'RobotoRegular', sans-serif;
+  font-size: 48px;
 }
 
 #liste-cadeau {
-  list-style-type:none;
-}
-
-.liste-cadeau-item {
-  color:var(--theme-rouge);
-  text-transform : capitalize;
-  text-decoration:none;
+  list-style-type: none;
 }
 
 #liste-cadeau li {
-  position:relative;
-  display:block;
-  margin-bottom:0.25rem;
-  background-color:var(--theme-blanc-transparent);
-  border-radius:var(--theme-border-radius);
-  padding:0.25rem;
-  padding-left:1.50rem;
-  box-shadow: 2px 2px var(--theme-blanc);
+  position: relative;
+  display: block;
+  margin-bottom: 0.25rem;
+  background-color: var(--theme-blanc-transparent);
+  border-radius: var(--theme-border-radius);
+  padding: 0.25rem;
+  padding-left: 1.50rem;
+  -webkit-box-shadow: 2px 2px var(--theme-blanc);
+          box-shadow: 2px 2px var(--theme-blanc);
 }
 
-#liste-cadeau li::before {
-   content:"G";
-   text-align:center;
-   color:var(--theme-rouge);
-   font-size:1.25rem;
-   position:absolute;
-   top:0.1rem;
-   left:0.25rem;
-   height:1rem;
-   width:1rem;
-
-   font-family:'BebasNeueRegular', sans-serif;
-
-
+.liste-cadeau-item {
+  color: var(--theme-rouge);
+  text-transform: capitalize;
+  text-decoration: none;
 }
 
-fieldset {
-  color:var(--theme-rouge);
-  border-color: var(--theme-rouge);
-  border-radius:var(--theme-border-radius);
+input[type="text"] {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--theme-blanc-transparent);
+  border-radius: var(--theme-border-radius);
 }
 
-input[type="text"],
-input[type="number"],
+input[type="number"] {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--theme-blanc-transparent);
+  border-radius: var(--theme-border-radius);
+}
+
 textarea {
-  display:block;
-  width:100%;
-  border:none;
-  background-color:var(--theme-blanc-transparent);
-  border-radius:var(--theme-border-radius);
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--theme-blanc-transparent);
+  border-radius: var(--theme-border-radius);
 }
 
-#page-chargement-application{
-  position:relative;
-  height:100vh;
-  background-image:url(illustration/vanilla-js.png);
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:bottom center;
-  background-attachment:fixed;
-
-  text-align:center;
-  font-size:2rem;
-  font-weight:normal;
-  line-height:1.8rem;
-
-  padding:10%;
-  color:var(--theme-blanc);
+#page-chargement-application {
+  position: relative;
+  height: 100vh;
+  background-image: url(illustration/vanilla-js.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+  background-attachment: fixed;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.8rem;
+  padding: 10%;
+  color: var(--theme-blanc);
   text-shadow: 2px 2px var(--theme-noir);
-  animation: pulse 1.5s infinite;
-  animation-direction: alternate;
+  -webkit-animation: pulse 1.5s infinite;
+          animation: pulse 1.5s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
-
-@keyframes pulse {
-  0% {
-    background-color:var(--theme-bleu-fonce);
-  }
-  100% {
-    background-color:var(--theme-bleu-pale);
-  }
-}
-
-
 
 .page {
-  position:relative;
-  background-color:var(--theme-bleu-pale);
-  padding:5%;
+  position: relative;
+  background-color: var(palette-color-4);
+  color: var(--palette-color-1);
+  padding: 5%;
   min-height: 100vh;
-  box-sizing: border-box;
-
-  background-image:url(illustration/personne-cadeau.png);
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:right bottom;
-  background-attachment:fixed;
-  background-size: 40%;
-  color:var(--theme-rouge);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-
-.page h1{
-  text-align:center;
-  font-size:2rem;
-  font-weight:normal;
-  line-height:1.8rem;
-  color:var(--theme-vert);
+.page h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.8rem;
+  color: var(--theme-vert);
   text-shadow: 2px 2px var(--theme-blanc);
-
 }
 
-.page h2,
+.page h2 {
+  background-color: var(--theme-blanc-transparent);
+  border: 0px transparent solid;
+  border-radius: var(--theme-border-radius);
+  padding: 0.25rem;
+}
+
 .page p {
-  background-color:var(--theme-blanc-transparent);
-  border:0px transparent solid;
-  border-radius:var(--theme-border-radius);
-  padding:0.25rem;
+  background-color: var(--theme-blanc-transparent);
+  border: 0px transparent solid;
+  border-radius: var(--theme-border-radius);
+  padding: 0.25rem;
 }
 
-
-.action{
-  position:relative;
-  display:block;
+.action {
+  position: relative;
+  display: block;
   text-decoration: none;
-  font-family:sans-serif;
-  background-color:#fd9f44;
-  color:var(--theme-blanc);
-  border:0px transparent solid;
-  border-radius:var(--theme-border-radius);
-  padding:0.25rem;
-  font-size:1rem;
-  text-align:center;
-  width:50%;
-  margin:0 auto;
-  box-sizing: border-box;
-  margin-top:0.25rem;
-  margin-bottom:0.25rem;
-  box-shadow: 2px 2px var(--theme-blanc);
+  font-family: sans-serif;
+  background-color: #fd9f44;
+  color: var(--theme-blanc);
+  border: 0px transparent solid;
+  border-radius: var(--theme-border-radius);
+  padding: 0.25rem;
+  font-size: 1rem;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  -webkit-box-shadow: 2px 2px var(--theme-blanc);
+          box-shadow: 2px 2px var(--theme-blanc);
 }
 
 .action:active {
-  border:0px transparent solid;
+  border: 0px transparent solid;
 }
+/*# sourceMappingURL=application.css.map */
