@@ -179,34 +179,37 @@ html {
           align-items: center;
 }
 
-.page form .form-row input {
+.page form .form-row {
   width: 100%;
-  padding: 0.5rem;
-  margin: 15px;
-  border: 0px;
-  border-radius: var(--theme-border-radius);
-  background: var(--theme-color-bg2);
-  color: var(--theme-color-text);
-  font-family: 'RobotoRegular', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
-.page form .form-row input label {
+.page form .form-row label {
   display: block;
   font-family: 'RobotoRegular', sans-serif;
   font-size: 0.8rem;
   color: var(--theme-color-text);
 }
 
-.page form .form-row input input,
-.page form .form-row input text-area {
+.page form .form-row input,
+.page form .form-row textarea {
+  width: 100%;
   border: 0px;
+  padding: 15px;
   border-radius: var(--theme-border-radius);
   background: var(--theme-color-bg2);
   color: var(--theme-color-text);
   font-family: 'RobotoRegular', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.page form .form-row input:focus,
+.page form .form-row textarea:focus {
+  outline: var(--theme-color-blue) solid 1px;
+  color: var(--theme-color-blue);
+}
+
+.page form .form-row textarea {
+  resize: vertical;
+  height: 10rem;
 }
 /*# sourceMappingURL=application.css.map */
