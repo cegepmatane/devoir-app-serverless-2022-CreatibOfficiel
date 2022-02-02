@@ -1,4 +1,4 @@
-﻿class Cadeau{
+﻿class Recipe {
   constructor(nom, marque, description, id = null){
     this.nom = nom;
     this.marque = marque;

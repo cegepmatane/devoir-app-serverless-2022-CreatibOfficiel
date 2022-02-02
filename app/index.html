@@ -4,11 +4,11 @@
   <title>Liste de cadeaux</title>
   <link rel="stylesheet" href="decoration/application.css">
   <style></style>
-  <script src="Cadeau.js"></script>
-  <script src="CadeauDAO.js"></script>
-  <script src="VueCadeau.js"></script>
-  <script src="VueListeCadeau.js"></script>
-  <script src="VueAjouterCadeau.js"></script>
+  <script src="Recipe.js"></script>
+  <script src="RecipeDAO.js"></script>
+  <script src="ViewRecipe.js"></script>
+  <script src="ViewListRecipe.js"></script>
+  <script src="ViewAddRecipe.js"></script>
   <!--
   https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies
   Scripts loaded using the defer attribute will run in the order they appear
@@ -26,14 +26,14 @@
     <h1>Liste de cadeaux</h1>
     <a class="action" href="#ajouter-cadeau">Ajouter un cadeau</a>
     <ul id="liste-cadeau">
-      <li><a href="#cadeau/{Cadeau.id}" class="liste-cadeau-item">{Cadeau.nom}</a></li>
+      <li><a href="#cadeau/{Recipe.id}" class="liste-cadeau-item">{Recipe.nom}</a></li>
     </ul>
   </div>
   </script>
 
   <script type="plain/text" id="html-vue-cadeau">
   <div class="page">
-    <h1>Cadeau</h1>
+    <h1>Recipe</h1>
     <h2 id="cadeau-nom"></h2>
     <span>Marque</span>
     <p id="cadeau-marque"></p>

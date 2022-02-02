@@ -1,4 +1,4 @@
-﻿class VueListeCadeau{
+﻿class ViewListRecipe {
   constructor(){
     this.html = document.getElementById("html-vue-liste-cadeau").innerHTML;
     this.listeCadeauDonnee = null;
@@ -17,8 +17,8 @@
 
     for(var numeroCadeau in this.listeCadeauDonnee){
       let listeCadeauItemHTMLRemplacement = listeCadeauItemHTML;
-      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Cadeau.id}",this.listeCadeauDonnee[numeroCadeau].id);
-      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Cadeau.nom}",this.listeCadeauDonnee[numeroCadeau].nom);
+      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Recipe.id}",this.listeCadeauDonnee[numeroCadeau].id);
+      listeCadeauItemHTMLRemplacement = listeCadeauItemHTMLRemplacement.replace("{Recipe.nom}",this.listeCadeauDonnee[numeroCadeau].nom);
       listeCadeauHTMLRemplacement += listeCadeauItemHTMLRemplacement;
     }
 

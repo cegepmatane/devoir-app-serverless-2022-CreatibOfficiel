@@ -1,4 +1,4 @@
-﻿class VueCadeau{
+﻿class ViewRecipe {
   constructor(){
     this.html = document.getElementById("html-vue-cadeau").innerHTML;
     this.cadeau = null;

@@ -1,12 +1,12 @@
-﻿class CadeauDAO {
+﻿class RecipeDAO {
   lister(action) {
-    fetch('https://szjfpzh9pl.execute-api.us-east-1.amazonaws.com/default/lister')
+    fetch('https://3yye5o5a63.execute-api.us-east-1.amazonaws.com/default/lister')
       .then(response => response.json())
       .then(data => {
         console.log(data);
         let listeCadeau = [];
         for (let position in data) {
-          let cadeau = new Cadeau(data[position].nom,
+          let cadeau = new Recipe(data[position].nom,
             data[position].marque,
             data[position].description,
             data[position].id);
@@ -19,11 +19,11 @@
   }
 
   chercher(id, action) {
-    fetch('https://p14kiro6wl.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=' + id)
+    fetch('https://rof7bte3c7.execute-api.us-east-1.amazonaws.com/default/chercher-par-id?id=' + id)
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        let cadeau = new Cadeau(data.nom,
+        let cadeau = new Recipe(data.nom,
           data.marque,
           data.description,
           data.id);
@@ -33,7 +33,7 @@
 
   ajouter(cadeau, action) {
     console.log(JSON.stringify(cadeau));
-    fetch('https://b00cm1lju7.execute-api.us-east-1.amazonaws.com/default/ajouter',
+    fetch('https://0igm350o8d.execute-api.us-east-1.amazonaws.com/default/ajouter',
       {
         method: 'POST',
         headers: {

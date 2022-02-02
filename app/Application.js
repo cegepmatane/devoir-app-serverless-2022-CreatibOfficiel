@@ -61,5 +61,5 @@
   }
 }
 
-new Application(window, new VueListeCadeau(), new VueCadeau(), new VueAjouterCadeau(), new CadeauDAO());
+new Application(window, new ViewListRecipe(), new ViewRecipe(), new ViewAddRecipe(), new RecipeDAO());
 

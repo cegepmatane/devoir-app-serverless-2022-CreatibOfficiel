@@ -7,3 +7,6 @@ dist
 *.tgz
 *.log
 *.env
+
+#intelliJ
+.idea

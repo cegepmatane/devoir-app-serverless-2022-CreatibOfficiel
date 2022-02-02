@@ -1,4 +1,4 @@
-﻿class VueAjouterCadeau{
+﻿class ViewAddRecipe {
   constructor(){
     this.html = document.getElementById("html-vue-ajouter-cadeau").innerHTML;
     this.ajouterCadeau = null;
@@ -20,7 +20,7 @@
     let marque = document.getElementById("cadeau-marque").value;
     let description = document.getElementById("cadeau-description").value;
 
-    this.ajouterCadeau(new Cadeau(nom, marque, description, null));
+    this.ajouterCadeau(new Recipe(nom, marque, description, null));
 
   }
 
