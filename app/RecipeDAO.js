@@ -4,17 +4,17 @@
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        let listeCadeau = [];
+        let listRecipe = [];
         for (let position in data) {
-          let cadeau = new Recipe(data[position].nom,
+          let recipe = new Recipe(data[position].nom,
             data[position].marque,
             data[position].description,
             data[position].id);
 
-          console.log(cadeau);
-          listeCadeau.push(cadeau);
+          console.log(recipe);
+          listRecipe.push(recipe);
         }
-        action(listeCadeau);
+        action(listRecipe);
       });
   }
 
@@ -23,11 +23,11 @@
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        let cadeau = new Recipe(data.nom,
+        let recipe = new Recipe(data.nom,
           data.marque,
           data.description,
           data.id);
-        action(cadeau);
+        action(recipe);
       });
   }
 
@@ -39,7 +39,8 @@
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify(cadeau),
+        body: "recipejson=" + JSON.stringify(cadeau),
+        mode: 'cors',
       })
       .then(response => response.text())
       .then(data => {
