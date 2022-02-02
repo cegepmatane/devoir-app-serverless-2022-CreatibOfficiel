@@ -4,15 +4,17 @@
 
 ## Team
 
-- Thibaud Chaussabel Blachier
+Thibaud Chaussabel Blachier
 <a href="https://github.com/CreatibOfficiel" target="_blank">
 <img height="18px" alt="GitHub followers" src="https://img.shields.io/github/followers/CreatibOfficiel?logo=github&style=for-the-badge">
 </a>
-- Mathéo Galuba 
+
+Mathéo Galuba 
 <a href="https://github.com/Paracetamol56" target="_blank">
 <img height="18px" alt="GitHub followers" src="https://img.shields.io/github/followers/Paracetamol56?logo=github&style=for-the-badge">
 </a>
-- Clément Gehin
+
+Clément Gehin
 <a href="https://github.com/clement-ghn" target="_blank">
 <img height="18px" alt="GitHub followers" src="https://img.shields.io/github/followers/clement-ghn?logo=github&style=for-the-badge">
 </a>
