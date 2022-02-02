@@ -10,17 +10,56 @@
 }
 
 :root {
-  --palette-color-1: #861388;
-  --palette-color-2: #E15A97;
-  --palette-color-3: #EEABC4;
-  --palette-color-4: #C799A6;
-  --palette-color-5: #4B2840;
+  --theme-color-red: #ed1e79;
+  --theme-color-blue: #29abe2;
+  --theme-color-purple: #9061ab;
+  --theme-color-bg1: #f2f2f2;
+  --theme-color-bg2: #c7dae2;
+  --theme-color-text: #252627;
   --theme-border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 html {
   font-family: 'RobotoRegular', sans-serif;
   font-size: 48px;
+}
+
+.page {
+  position: relative;
+  background-color: var(--theme-color-bg1);
+  color: var(--palette-color-1);
+  padding: 5%;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.8rem;
+  color: var(--theme-vert);
+  text-shadow: 2px 2px var(--theme-blanc);
+}
+
+.page h2 {
+  background-color: var(--theme-blanc-transparent);
+  border: 0px transparent solid;
+  border-radius: var(--theme-border-radius);
+  padding: 0.25rem;
+}
+
+.page p {
+  background-color: var(--theme-blanc-transparent);
+  border: 0px transparent solid;
+  border-radius: var(--theme-border-radius);
+  padding: 0.25rem;
 }
 
 #liste-cadeau {
@@ -128,8 +167,8 @@ textarea {
   display: block;
   text-decoration: none;
   font-family: sans-serif;
-  background-color: #fd9f44;
-  color: var(--theme-blanc);
+  background-color: var(--palette-color-1);
+  color: var(--palette-color-3);
   border: 0px transparent solid;
   border-radius: var(--theme-border-radius);
   padding: 0.25rem;
@@ -141,8 +180,6 @@ textarea {
           box-sizing: border-box;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-  -webkit-box-shadow: 2px 2px var(--theme-blanc);
-          box-shadow: 2px 2px var(--theme-blanc);
 }
 
 .action:active {

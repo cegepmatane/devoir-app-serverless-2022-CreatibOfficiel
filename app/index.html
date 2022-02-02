@@ -25,24 +25,24 @@
 
   <script type="plain/text" id="html-vue-liste-cadeau">
   <div class="page">
-    <h1>Liste de cadeaux</h1>
-    <a class="action" href="#ajouter-cadeau">Ajouter un cadeau</a>
+    <h1>Recipes</h1>
+    <a class="action" href="#adding">Add a new recipe</a>
     <ul id="liste-cadeau">
-      <li><a href="#cadeau/{Recipe.id}" class="liste-cadeau-item">{Recipe.nom}</a></li>
+      <li><a href="#recipe/{Recipe.id}" class="liste-cadeau-item">{Recipe.nom}</a></li>
     </ul>
   </div>
   </script>
 
   <script type="plain/text" id="html-vue-cadeau">
-  <div class="page">
-    <h1>Recipe</h1>
-    <h2 id="cadeau-nom"></h2>
-    <span>Marque</span>
-    <p id="cadeau-marque"></p>
-    <span>Description</span>
-    <p id="cadeau-description"></p>
-    <a href="#" class="action">Revenir &agrave; la liste</a>
-  </div>
+    <div class="page">
+      <h1>Recipe</h1>
+      <h2 id="cadeau-nom"></h2>
+      <span>Marque</span>
+      <p id="cadeau-marque"></p>
+      <span>Description</span>
+      <p id="cadeau-description"></p>
+      <a href="#" class="action">Revenir &agrave; la liste</a>
+    </div>
   </script>
 
   <script type="plain/text" id="html-vue-ajouter-cadeau">
