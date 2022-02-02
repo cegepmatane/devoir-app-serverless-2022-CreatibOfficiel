@@ -42,7 +42,7 @@
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "recipejson=" + JSON.stringify(cadeau),
+        body: "recipejson=" + JSON.stringify(recipe),
         mode: 'cors',
       })
       .then(response => response.text())
