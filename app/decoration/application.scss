@@ -24,138 +24,78 @@ html {
 	font-family: 'RobotoRegular', sans-serif;
 	font-size: 48px;
 }
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--theme-color-bg2);
+	h1 {
+		color: var(--theme-color-red);
+		font-family: 'BebasNeueRegular', sans-serif;
+		font-size: 1.5rem;
+	}
+	h2 {
+		color: var(--theme-color-blue);
+		font-family: 'RobotoRegular', sans-serif;
+		font-size: 1rem;
+	}
+	p {
+		color: var(--theme-color-purple);
+		font-family: 'RobotoRegular', sans-serif;
+		font-size: 0.8rem;
+	}
+}
+.button {
+	display: inline-block;
+	padding: 0.2rem 0.4rem;
+	margin: 15px;
+	border: 0px;
+	border-radius: var(--theme-border-radius);
+	background: var(--theme-color-red);
+	color: var(--theme-color-text);
+	text-decoration: none;
+	font-family: 'BebasNeueRegular', sans-serif;
+	font-size: 1rem;
+	cursor: pointer;
+}
 .page {
 	position: relative;
 	background-color: var(--theme-color-bg1);
-	color: var(--palette-color-1);
+	color: var(--palette-color-text);
 	padding: 5%;
 	min-height: 100vh;
 	box-sizing: border-box;
 	h1 {
-		text-align: center;
-		font-size: 2rem;
+		font-family: 'BebasNeueRegular', sans-serif;
+		font-size: 3rem;
 		font-weight: normal;
 		line-height: 1.8rem;
-		color: var(--theme-vert);
-		text-shadow: 2px 2px var(--theme-blanc);
-	}
-	h2 {
-		background-color: var(--theme-blanc-transparent);
-		border: 0px transparent solid;
-		border-radius: var(--theme-border-radius);
-		padding: 0.25rem;
-	}
-	p {
-		background-color: var(--theme-blanc-transparent);
-		border: 0px transparent solid;
-		border-radius: var(--theme-border-radius);
-		padding: 0.25rem;
-	}
-}
-
-#liste-cadeau {
-	list-style-type: none;
-	li {
-		position: relative;
-		display: block;
-		margin-bottom: 0.25rem;
-		background-color: var(--theme-blanc-transparent);
-		border-radius: var(--theme-border-radius);
-		padding: 0.25rem;
-		padding-left: 1.50rem;
-		box-shadow: 2px 2px var(--theme-blanc);
-	}
-}
-.liste-cadeau-item {
-	color: var(--theme-rouge);
-	text-transform: capitalize;
-	text-decoration: none;
-}
-input[type="text"] {
-	display: block;
-	width: 100%;
-	border: none;
-	background-color: var(--theme-blanc-transparent);
-	border-radius: var(--theme-border-radius);
-}
-input[type="number"] {
-	display: block;
-	width: 100%;
-	border: none;
-	background-color: var(--theme-blanc-transparent);
-	border-radius: var(--theme-border-radius);
-}
-textarea {
-	display: block;
-	width: 100%;
-	border: none;
-	background-color: var(--theme-blanc-transparent);
-	border-radius: var(--theme-border-radius);
-}
-#page-chargement-application {
-	position: relative;
-	height: 100vh;
-	background-image: url(illustration/vanilla-js.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: bottom center;
-	background-attachment: fixed;
-	text-align: center;
-	font-size: 2rem;
-	font-weight: normal;
-	line-height: 1.8rem;
-	padding: 10%;
-	color: var(--theme-blanc);
-	text-shadow: 2px 2px var(--theme-noir);
-	animation: pulse 1.5s infinite;
-	animation-direction: alternate;
-}
-.page {
-	position: relative;
-	background-color: var(palette-color-4);
-	color: var(--palette-color-1);
-	padding: 5%;
-	min-height: 100vh;
-	box-sizing: border-box;
-	h1 {
 		text-align: center;
-		font-size: 2rem;
-		font-weight: normal;
-		line-height: 1.8rem;
-		color: var(--theme-vert);
-		text-shadow: 2px 2px var(--theme-blanc);
+		color: var(--theme-color-red);
 	}
-	h2 {
-		background-color: var(--theme-blanc-transparent);
-		border: 0px transparent solid;
+	ul {
+		background-color: var(--theme-color-bg2);
 		border-radius: var(--theme-border-radius);
-		padding: 0.25rem;
-	}
-	p {
-		background-color: var(--theme-blanc-transparent);
-		border: 0px transparent solid;
-		border-radius: var(--theme-border-radius);
-		padding: 0.25rem;
-	}
-}
-.action {
-	position: relative;
-	display: block;
-	text-decoration: none;
-	font-family: sans-serif;
-	background-color: var(--palette-color-1);
-	color: var(--palette-color-3);
-	border: 0px transparent solid;
-	border-radius: var(--theme-border-radius);
-	padding: 0.25rem;
-	font-size: 1rem;
-	text-align: center;
-	width: 50%;
-	margin: 0 auto;
-	box-sizing: border-box;
-	margin-top: 0.25rem;
-	margin-bottom: 0.25rem;
-	&:active {
-		border: 0px transparent solid;
+		list-style: none;
+		padding: 0;
+		margin: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: left;
+		li {
+			a {
+				text-decoration: none;
+				color: var(--theme-color-text);
+				font-family: 'RobotoRegular', sans-serif;
+			}
+		}
 	}
 }

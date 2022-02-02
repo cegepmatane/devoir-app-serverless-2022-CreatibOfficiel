@@ -20,17 +20,20 @@
 </head>
 
 <body>
-  <div id="page-chargement-application">Chargement de l'application liste de cadeaux</div>
-
+  <div class="loader">
+    <h1>Recipe book</h1>
+    <h2>Loading...</h2>
+    <p>An app from :<br>Thibaud Chaussabel Blachier,<br>Mathéo Galuba<br>and Clément Gehin</p>
+  </div>
 
   <script type="plain/text" id="html-vue-liste-cadeau">
-  <div class="page">
-    <h1>Recipes</h1>
-    <a class="action" href="#adding">Add a new recipe</a>
-    <ul id="liste-cadeau">
-      <li><a href="#recipe/{Recipe.id}" class="liste-cadeau-item">{Recipe.nom}</a></li>
-    </ul>
-  </div>
+    <div class="page">
+      <h1>Recipe book</h1>
+      <a class="button" href="#adding">Add a new recipe</a>
+      <ul id="recipe-list">
+        <li><a href="#recipe/{Recipe.id}" class="recipe-list-item">{Recipe.name}</a></li>
+      </ul>
+    </div>
   </script>
 
   <script type="plain/text" id="html-vue-cadeau">
