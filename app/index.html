@@ -39,17 +39,28 @@
     </script>
 
     <script type="plain/text" id="html-recipeView">
-      <h1>Recipe name</h1>
-      <h2 id="recipe-name"></h2>
-      <span>Cooking time</span>
-      <p id="recipe-cooking-time"></p>
-      <span>Baking time</span>
-      <p id="recipe-baking-time"></p>
-      <span>Ingredients list</span>
-      <p id="recipe-ingredients-list"></p>
-      <span>Steps</span>
-      <p id="recipe-steps-list"></p>
-      <a href="#" class="action">Revenir &agrave; la liste</a>
+      <h1 id="recipe-name-title">{name}</h1>
+      <table id="recipe-view">
+        <tr>
+          <td class="row-name">Cooking time</td>
+          <td class="row-value">{cooking-time} minutes</td>
+        </tr>
+        <tr>
+          <td class="row-name">Baking time</td>
+          <td class="row-value">{baking-time} minutes</td>
+        </tr>
+        <tr>
+          <td class="row-name">Ingredients list</td>
+          <td class="row-value">{ingredients-list}</td>
+        </tr>
+        <tr>
+          <td class="row-name">Steps</td>
+          <td class="row-value">{steps-list}</td>
+        </tr>
+      </table>
+      <div class="button-wrapper">
+        <a href="#" class="button">Back</a>
+      </div>
     </script>
 
     <script type="plain/text" id="html-addingView">

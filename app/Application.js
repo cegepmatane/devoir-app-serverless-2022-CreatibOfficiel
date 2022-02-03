@@ -43,7 +43,7 @@
   showNewListRecipe(listRecipe) {
     console.log(listRecipe);
     this.viewListRecipe.initListRecipe(listRecipe);
-    document.getElementsByClassName("loader")[0].style.display = "none";
+    document.getElementById("loader").style.display = "none";
     this.viewListRecipe.render();
   }
 
