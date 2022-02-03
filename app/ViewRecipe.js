@@ -1,18 +1,19 @@
 ﻿class ViewRecipe {
   constructor() {
     this.html = document.getElementById("html-recipeView").innerHTML;
-    this.cadeau = null;
+    this.recipe = null;
   }
 
   initRecipe(recipe) {
-    this.cadeau = recipe;
+    this.recipe = recipe;
   }
 
   afficher() {
     document.getElementsByTagName("body")[0].innerHTML = this.html;
-    document.getElementById("cadeau-nom").innerHTML = this.cadeau.nom;
-    document.getElementById("cadeau-marque").innerHTML = this.cadeau.marque;
-    document.getElementById("cadeau-description").innerHTML = this.cadeau.description;
+    document.getElementById("recipe-nom").innerHTML = this.recipe.name_of_recipe;
+    document.getElementById("recipe-time-preparation").innerHTML = this.recipe.time_of_preparation;
+    document.getElementById("recipe-time-cook").innerHTML = this.recipe.time_of_cook;
+    document.getElementById("recipe-list-ingredients").innerHTML = this.recipe.list_of_ingredients;
+    document.getElementById("recipe-list-steps").innerHTML = this.recipe.list_of_steps;
   }
-
 }
