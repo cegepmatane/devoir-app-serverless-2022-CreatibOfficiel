@@ -29,7 +29,7 @@ html {
   font-size: 36px;
 }
 
-.loader {
+#loader {
   position: fixed;
   z-index: 5;
   top: 0;
@@ -53,19 +53,19 @@ html {
   background-color: var(--theme-color-bg2);
 }
 
-.loader h1 {
+#loader h1 {
   color: var(--theme-color-red);
   font-family: 'BebasNeueRegular', sans-serif;
   font-size: 1.5rem;
 }
 
-.loader h2 {
+#loader h2 {
   color: var(--theme-color-blue);
   font-family: 'RobotoRegular', sans-serif;
   font-size: 1rem;
 }
 
-.loader p {
+#loader p {
   color: var(--theme-color-purple);
   font-family: 'RobotoRegular', sans-serif;
   font-size: 0.8rem;
@@ -135,6 +135,27 @@ html {
   color: var(--theme-color-red);
 }
 
+#page table#recipe-view {
+  width: 100%;
+  margin: 15px;
+  background-color: var(--theme-color-bg2);
+  border-radius: var(--theme-border-radius);
+}
+
+#page table#recipe-view td {
+  padding: 0.5rem;
+}
+
+#page table#recipe-view td.row-name {
+  font-weight: bold;
+  width: 25%;
+  color: var(--theme-color-blue);
+}
+
+#page table#recipe-view td.row-value {
+  color: var(--theme-color-text);
+}
+
 #page ul {
   background-color: var(--theme-color-bg2);
   border-radius: var(--theme-border-radius);
@@ -157,9 +178,15 @@ html {
           justify-content: left;
 }
 
+#page ul li {
+  padding: 0.5rem;
+}
+
 #page ul li a {
+  width: 100%;
+  color: var(--theme-color-blue);
+  font-weight: bold;
   text-decoration: none;
-  color: var(--theme-color-text);
   font-family: 'RobotoRegular', sans-serif;
 }
 

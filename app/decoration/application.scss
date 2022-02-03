@@ -24,7 +24,7 @@ html {
 	font-family: 'RobotoRegular', sans-serif;
 	font-size: 36px;
 }
-.loader {
+#loader {
 	position: fixed;
 	z-index: 5;
 	top: 0;
@@ -93,6 +93,23 @@ html {
 		text-align: center;
 		color: var(--theme-color-red);
 	}
+	table#recipe-view {
+		width: 100%;
+		margin: 15px;
+		background-color: var(--theme-color-bg2);
+		border-radius: var(--theme-border-radius);
+		td {
+			padding: 0.5rem;
+			&.row-name {
+				font-weight: bold;
+				width: 25%;
+				color: var(--theme-color-blue);
+			}
+			&.row-value {
+				color: var(--theme-color-text);
+			}
+		}
+	}
 	ul {
 		background-color: var(--theme-color-bg2);
 		border-radius: var(--theme-border-radius);
@@ -105,9 +122,12 @@ html {
 		align-items: flex-start;
 		justify-content: left;
 		li {
+			padding: 0.5rem;
 			a {
+				width: 100%;
+				color: var(--theme-color-blue);
+				font-weight: bold;
 				text-decoration: none;
-				color: var(--theme-color-text);
 				font-family: 'RobotoRegular', sans-serif;
 			}
 		}
