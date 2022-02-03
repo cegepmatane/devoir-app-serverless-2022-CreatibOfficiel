@@ -10,17 +10,19 @@
 
   afficher() {
     document.getElementById("page").innerHTML = this.html;
-    document.getElementById("formulaire-ajouter").addEventListener("submit", evenement => this.enregistrer(evenement));
+    document.getElementById("adding-form").addEventListener("submit", evenement => this.enregistrer(evenement));
   }
 
   enregistrer(evenement) {
     evenement.preventDefault();
 
-    let nom = document.getElementById("cadeau-nom").value;
-    let marque = document.getElementById("cadeau-marque").value;
-    let description = document.getElementById("cadeau-description").value;
+    let nom = document.getElementById("recipe-name").value;
+    let cooking = document.getElementById("recipe-cooking-time").value;
+    let baking = document.getElementById("recipe-baking-time").value;
+    let ingredients = document.getElementById("recipe-ingredients-list").value;
+    let steps = document.getElementById("recipe-steps-list").value;
 
-    this.addRecipe(new Recipe(nom, marque, description, null));
+    this.addRecipe(new Recipe(nom, cooking, baking, ingredients, steps, null));
 
   }
 

@@ -34,7 +34,7 @@
 
     } else {
 
-      let navigation = hash.match(/^#cadeau\/([0-9]+)/);
+      let navigation = hash.match(/^#recipe\/([0-9]+)/);
       let idRecipe = navigation[1];
 
       this.recipeDAO.chercher(idRecipe, (recipe) => this.showNewRecipe(recipe));

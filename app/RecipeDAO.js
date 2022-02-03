@@ -53,16 +53,4 @@
                 action();
             });
     }
-
-    get lister_link() {
-        return 'https://3ogj7wx99l.execute-api.us-east-1.amazonaws.com/default/list-recipe-function';
-    }
-
-    get chercher_link() {
-        return 'https://3ogwdphqf2.execute-api.us-east-1.amazonaws.com/default/chercher-par-id-recipe-function?id=';
-    }
-
-    get ajouter_link() {
-        return 'https://tr4mkn0sfh.execute-api.us-east-1.amazonaws.com/default/add-recipe-function';
-    }
 }
