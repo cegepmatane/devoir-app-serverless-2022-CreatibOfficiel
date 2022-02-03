@@ -16,6 +16,9 @@
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () => this.naviguer());
 
+    // let recipe = new Recipe("Spagetthi", "30mn", "10mn", "Pate", "Mettre les pates dans de l'eau", null);
+    this.recipeDAO.ajouter(recipe, () => this.showListRecipe());
+
     this.naviguer();
   }
 
