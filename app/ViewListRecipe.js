@@ -1,24 +1,24 @@
 ﻿class ViewListRecipe {
-  constructor(){
-    this.html = document.getElementById("html-vue-liste-cadeau").innerHTML;
+  constructor() {
+    this.html = document.getElementById("html-listView").innerHTML;
     this.listRecipeGiven = null;
   }
 
-  initListRecipe(listRecipeGiven){
+  initListRecipe(listRecipeGiven) {
     this.listRecipeGiven = listRecipeGiven;
   }
 
-  afficher(){
-    document.getElementsByTagName("body")[0].innerHTML = this.html;
+  afficher() {
+    document.getElementById("page").innerHTML = this.html;
 
     let listRecipe = document.getElementById("liste-cadeau");
     const listRecipeItemHTML = listRecipe.innerHTML;
     let listRecipeHTMLReplacement = "";
 
-    for(var numberRecipe in this.listRecipeGiven){
+    for (var numberRecipe in this.listRecipeGiven) {
       let listRecipeItemHTMLReplacement = listRecipeItemHTML;
-      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.id}",this.listRecipeGiven[numberRecipe].id);
-      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.nom}",this.listRecipeGiven[numberRecipe].nom);
+      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.id}", this.listRecipeGiven[numberRecipe].id);
+      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.nom}", this.listRecipeGiven[numberRecipe].nom);
       listRecipeHTMLReplacement += listRecipeItemHTMLReplacement;
     }
 
