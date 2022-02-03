@@ -1,5 +1,5 @@
 ﻿class Application {
-  constructor(window, viewListRecipe, viewRecipe, viewAddRecipe, recipeDAO) {
+  constructor(window, viewListRecipe, viewRecipe, viewAddRecipe, recipeDAO, apiUrl) {
     this.window = window;
 
     this.viewListRecipe = viewListRecipe;
@@ -26,23 +26,21 @@
 
     if (!hash) {
 
-      this.recipeDAO.lister((listRecipe) => this.showNewListRecipe(listRecipe));
+      this.recipeDAO.getAll((listRecipe) => this.showNewListRecipe(listRecipe));
 
     } else if (hash.match(/^#adding/)) {
 
       this.viewAddRecipe.afficher();
 
     } else {
-
       let navigation = hash.match(/^#recipe\/([0-9]+)/);
       let idRecipe = navigation[1];
 
-      this.recipeDAO.chercher(idRecipe, (recipe) => this.showNewRecipe(recipe));
+      this.recipeDAO.getById(idRecipe, (recipe) => this.showNewRecipe(recipe));
     }
   }
 
   showNewListRecipe(listRecipe) {
-
     console.log(listRecipe);
     this.viewListRecipe.initListRecipe(listRecipe);
     document.getElementsByClassName("loader")[0].style.display = "none";
@@ -56,7 +54,7 @@
   }
 
   addRecipe(recipe) {
-    this.recipeDAO.ajouter(recipe, () => this.showListRecipe());
+    this.recipeDAO.add(recipe, () => this.showListRecipe());
   }
 
   showListRecipe() {

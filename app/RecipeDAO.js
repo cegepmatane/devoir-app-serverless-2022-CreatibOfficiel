@@ -1,6 +1,7 @@
 ﻿class RecipeDAO {
-    lister(action) {
-        fetch(this.lister_link)
+    getAll(action) {
+        console.log(apiUrl.getAll)
+        fetch(apiUrl.getAll)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
@@ -20,8 +21,8 @@
             });
     }
 
-    chercher(id, action) {
-        fetch(this.chercher_link + id)
+    getById(id, action) {
+        fetch(apiUrl.getById + "?id=" + id)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
@@ -36,9 +37,9 @@
     }
 
 
-    ajouter(recipe, action) {
-    console.log(JSON.stringify(recipe));
-        fetch(this.ajouter_link,
+    Add(recipe, action) {
+        console.log(JSON.stringify(recipe));
+        fetch(apiUrl.add,
             {
                 method: 'POST',
                 headers: {

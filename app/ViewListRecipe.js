@@ -24,5 +24,4 @@
 
     listRecipe.innerHTML = listRecipeHTMLReplacement;
   }
-
 }
