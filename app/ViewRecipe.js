@@ -8,7 +8,7 @@
     this.recipe = recipe;
   }
 
-  afficher() {
+  render() {
     document.getElementsByTagName("body")[0].innerHTML = this.html;
     document.getElementById("recipe-name").innerHTML = this.recipe.name_of_recipe;
     document.getElementById("recipe-cooking-time").innerHTML = this.recipe.time_of_preparation;

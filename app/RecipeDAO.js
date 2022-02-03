@@ -26,7 +26,8 @@
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                let recipe = new Recipe(data.name_of_recipe,
+                let recipe = new Recipe(
+                    data.name_of_recipe,
                     data.time_of_preparation,
                     data.time_of_cook,
                     data.list_of_ingredients,
@@ -37,7 +38,7 @@
     }
 
 
-    Add(recipe, action) {
+    add(recipe, action) {
         console.log(JSON.stringify(recipe));
         fetch(apiUrl.add,
             {

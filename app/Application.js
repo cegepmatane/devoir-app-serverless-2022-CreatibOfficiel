@@ -30,7 +30,7 @@
 
     } else if (hash.match(/^#adding/)) {
 
-      this.viewAddRecipe.afficher();
+      this.viewAddRecipe.render();
 
     } else {
       let navigation = hash.match(/^#recipe\/([0-9]+)/);
@@ -44,13 +44,13 @@
     console.log(listRecipe);
     this.viewListRecipe.initListRecipe(listRecipe);
     document.getElementsByClassName("loader")[0].style.display = "none";
-    this.viewListRecipe.afficher();
+    this.viewListRecipe.render();
   }
 
   showNewRecipe(recipe) {
     console.log(recipe);
     this.viewRecipe.initRecipe(recipe);
-    this.viewRecipe.afficher();
+    this.viewRecipe.render();
   }
 
   addRecipe(recipe) {

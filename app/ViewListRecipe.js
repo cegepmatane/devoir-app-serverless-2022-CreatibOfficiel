@@ -8,7 +8,7 @@
     this.listRecipeGiven = listRecipeGiven;
   }
 
-  afficher() {
+  render() {
     document.getElementById("page").innerHTML = this.html;
 
     let listRecipe = document.getElementById("recipe-list");

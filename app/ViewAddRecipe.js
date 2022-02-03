@@ -8,12 +8,12 @@
     this.addRecipe = addRecipe;
   }
 
-  afficher() {
+  render() {
     document.getElementById("page").innerHTML = this.html;
-    document.getElementById("adding-form").addEventListener("submit", evenement => this.enregistrer(evenement));
+    document.getElementById("adding-form").addEventListener("submit", evenement => this.render(evenement));
   }
 
-  enregistrer(evenement) {
+  save(evenement) {
     evenement.preventDefault();
 
     let nom = document.getElementById("recipe-name").value;
