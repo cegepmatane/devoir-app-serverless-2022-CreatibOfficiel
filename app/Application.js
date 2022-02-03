@@ -15,6 +15,7 @@
     // C'est l'équivalent de function(){this.naviguer()}
     this.window.addEventListener("hashchange", () => this.naviguer());
 
+    // Show the list of recipes
     this.naviguer();
   }
 
@@ -42,6 +43,7 @@
 
     console.log(listRecipe);
     this.viewListRecipe.initListRecipe(listRecipe);
+    document.getElementsByClassName("loader")[0].style.display = "none";
     this.viewListRecipe.afficher();
   }
 

@@ -22,10 +22,11 @@ body {
 }
 html {
 	font-family: 'RobotoRegular', sans-serif;
-	font-size: 48px;
+	font-size: 36px;
 }
 .loader {
 	position: fixed;
+	z-index: 5;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -73,7 +74,7 @@ html {
 		cursor: pointer;
 	}
 }
-.page {
+#page {
 	position: relative;
 	background-color: var(--theme-color-bg1);
 	color: var(--palette-color-text);

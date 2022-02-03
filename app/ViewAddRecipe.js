@@ -9,7 +9,7 @@
   }
 
   afficher() {
-    document.getElementsByTagName("body")[0].innerHTML = this.html;
+    document.getElementById("page").innerHTML = this.html;
     document.getElementById("formulaire-ajouter").addEventListener("submit", evenement => this.enregistrer(evenement));
   }
 

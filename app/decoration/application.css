@@ -26,11 +26,12 @@ body {
 
 html {
   font-family: 'RobotoRegular', sans-serif;
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .loader {
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -102,7 +103,7 @@ html {
   cursor: pointer;
 }
 
-.page {
+#page {
   position: relative;
   background-color: var(--theme-color-bg1);
   color: var(--palette-color-text);
@@ -125,7 +126,7 @@ html {
           align-items: center;
 }
 
-.page h1 {
+#page h1 {
   font-family: 'BebasNeueRegular', sans-serif;
   font-size: 3rem;
   font-weight: normal;
@@ -134,7 +135,7 @@ html {
   color: var(--theme-color-red);
 }
 
-.page ul {
+#page ul {
   background-color: var(--theme-color-bg2);
   border-radius: var(--theme-border-radius);
   list-style: none;
@@ -156,13 +157,13 @@ html {
           justify-content: left;
 }
 
-.page ul li a {
+#page ul li a {
   text-decoration: none;
   color: var(--theme-color-text);
   font-family: 'RobotoRegular', sans-serif;
 }
 
-.page form {
+#page form {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,19 +180,19 @@ html {
           align-items: center;
 }
 
-.page form .form-row {
+#page form .form-row {
   width: 100%;
 }
 
-.page form .form-row label {
+#page form .form-row label {
   display: block;
   font-family: 'RobotoRegular', sans-serif;
   font-size: 0.8rem;
   color: var(--theme-color-text);
 }
 
-.page form .form-row input,
-.page form .form-row textarea {
+#page form .form-row input,
+#page form .form-row textarea {
   width: 100%;
   border: 0px;
   padding: 15px;
@@ -202,13 +203,13 @@ html {
   font-size: 0.8rem;
 }
 
-.page form .form-row input:focus,
-.page form .form-row textarea:focus {
+#page form .form-row input:focus,
+#page form .form-row textarea:focus {
   outline: var(--theme-color-blue) solid 1px;
   color: var(--theme-color-blue);
 }
 
-.page form .form-row textarea {
+#page form .form-row textarea {
   resize: vertical;
   height: 10rem;
 }

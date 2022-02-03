@@ -26,8 +26,8 @@
     <p>An app from :<br>Thibaud Chaussabel Blachier,<br>Mathéo Galuba<br>and Clément Gehin</p>
   </div>
 
-  <script type="plain/text" id="html-listView">
-    <div class="page">
+  <section id="page">
+    <script type="plain/text" id="html-listView">
       <h1>Recipe book</h1>
       <ul id="recipe-list">
         <li><a href="#recipe/{Recipe.id}" class="recipe-list-item">{Recipe.name}</a></li>
@@ -35,11 +35,9 @@
       <div class="button-wrapper">
         <a class="button" href="#adding">Add a new recipe</a>
       </div>
-    </div>
-  </script>
+    </script>
 
-  <script type="plain/text" id="html-recipeView">
-    <div class="page">
+    <script type="plain/text" id="html-recipeView">
       <h1>Recipe</h1>
       <h2 id="cadeau-nom"></h2>
       <span>Marque</span>
@@ -47,11 +45,9 @@
       <span>Description</span>
       <p id="cadeau-description"></p>
       <a href="#" class="action">Revenir &agrave; la liste</a>
-    </div>
-  </script>
+    </script>
 
-  <script type="plain/text" id="html-addingView">
-    <div class="page">
+    <script type="plain/text" id="html-addingView">
       <h1>Add a new recipe</h1>
       <form id="adding-form">
         <div class="form-row">
@@ -77,11 +73,10 @@
         <div class="button-wrapper">
           <button class="button" type="submit">Save</button>
           <a class="button" href="#">Cancel</a>
-        </div>
-      </form>
-    </div>
-  </script>
-
+      </div>
+    </form>
+    </script>
+  </section>
 </body>
 
 </html>

@@ -9,7 +9,7 @@
   }
 
   afficher() {
-    document.getElementsByTagName("body")[0].innerHTML = this.html;
+    document.getElementById("page").innerHTML = this.html;
 
     let listRecipe = document.getElementById("liste-cadeau");
     const listRecipeItemHTML = listRecipe.innerHTML;
