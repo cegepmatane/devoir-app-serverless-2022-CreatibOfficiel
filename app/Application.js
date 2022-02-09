@@ -16,7 +16,7 @@
     this.window.addEventListener("hashchange", () => this.naviguer());
 
     //let recipe = new Recipe("Bouffe américaine", "67mn", "89mn", "Bouffe", "melange fort", null);
-    //this.recipeDAO.ajouter(recipe, () => this.showListRecipe());
+    //this.recipeDAO.add-recipe-function(recipe, () => this.showListRecipe());
 
     this.naviguer();
   }
