@@ -4,7 +4,7 @@
     this.listRecipeGiven = null;
   }
 
-  initListRecipe(listRecipeGiven) {
+  initializeListRecipe(listRecipeGiven) {
     this.listRecipeGiven = listRecipeGiven;
   }
 
