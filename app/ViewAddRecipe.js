@@ -16,11 +16,11 @@
   save(evenement) {
     evenement.preventDefault();
 
-    let nom = document.getElementById("recipe-name").value;
-    let cooking = document.getElementById("recipe-cooking-time").value;
-    let baking = document.getElementById("recipe-baking-time").value;
-    let ingredients = document.getElementById("recipe-ingredients-list").value;
-    let steps = document.getElementById("recipe-steps-list").value;
+    let nom = document.getElementById("recipeName").value;
+    let cooking = document.getElementById("recipeCookingTime").value;
+    let baking = document.getElementById("recipeBakingTime").value;
+    let ingredients = document.getElementById("recipeIngredientsList").value;
+    let steps = document.getElementById("recipeStepsList").value;
 
     this.addRecipe(new Recipe(nom, cooking, baking, ingredients, steps, null));
 

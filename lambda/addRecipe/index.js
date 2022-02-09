@@ -20,7 +20,7 @@ exports.handler = async (event) => {
         headers: {
             "Access-Control-Allow-Origin" : "*"
         },
-        body : "Pas de recette reçu",
+        body : "No recipe received",
     };
 
     if (recipe == null) {

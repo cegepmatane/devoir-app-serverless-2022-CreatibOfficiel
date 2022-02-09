@@ -18,7 +18,7 @@
     for (var numberRecipe in this.listRecipeGiven) {
       let listRecipeItemHTMLReplacement = listRecipeHTML;
       listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.id}", this.listRecipeGiven[numberRecipe].id);
-      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.name}", this.listRecipeGiven[numberRecipe].name_of_recipe);
+      listRecipeItemHTMLReplacement = listRecipeItemHTMLReplacement.replace("{Recipe.name}", this.listRecipeGiven[numberRecipe].recipeName);
       listRecipeHTMLReplacement += listRecipeItemHTMLReplacement;
     }
 

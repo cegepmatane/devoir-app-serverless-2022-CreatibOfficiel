@@ -13,7 +13,7 @@ exports.handler = async (event) => {
         headers: {
             "Access-Control-Allow-Origin" : "*"
         },
-        body: 'Vous devez donner un id de recette'
+        body: 'You must give a recipe id'
     };
     if (id == null) {
         return response;

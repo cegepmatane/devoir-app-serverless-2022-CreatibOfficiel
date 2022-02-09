@@ -7,11 +7,11 @@
                 console.log(data);
                 let listRecipe = [];
                 for (let position in data) {
-                    let recipe = new Recipe(data[position].name_of_recipe,
-                        data[position].time_of_preparation,
-                        data[position].time_of_cook,
-                        data[position].list_of_ingredients,
-                        data[position].list_of_steps,
+                    let recipe = new Recipe(data[position].recipeName,
+                        data[position].recipeCookingTime,
+                        data[position].recipeBakingTime,
+                        data[position].recipeIngredientsList,
+                        data[position].recipeStepsList,
                         data[position].id);
 
                     console.log(recipe);
@@ -26,12 +26,11 @@
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                let recipe = new Recipe(
-                    data.name_of_recipe,
-                    data.time_of_preparation,
-                    data.time_of_cook,
-                    data.list_of_ingredients,
-                    data.list_of_steps,
+                let recipe = new Recipe(data.recipeName,
+                    data.recipeCookingTime,
+                    data.recipeBakingTime,
+                    data.recipeIngredientsList,
+                    data.recipeStepsList,
                     data.id);
                 action(recipe);
             });

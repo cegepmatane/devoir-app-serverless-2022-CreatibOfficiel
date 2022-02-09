@@ -1,10 +1,10 @@
 ﻿class Recipe {
-  constructor(name_of_recipe, time_of_preparation, time_of_cook, list_of_ingredients, list_of_steps, id = null) {
-    this.name_of_recipe = name_of_recipe;
-    this.time_of_preparation = time_of_preparation;
-    this.time_of_cook = time_of_cook;
-    this.list_of_ingredients = list_of_ingredients;
-    this.list_of_steps = list_of_steps;
+  constructor(recipeName, recipeCookingTime, recipeBakingTime, recipeIngredientsList, recipeStepsList, id = null) {
+    this.recipeName = recipeName;
+    this.recipeCookingTime = recipeCookingTime;
+    this.recipeBakingTime = recipeBakingTime;
+    this.recipeIngredientsList = recipeIngredientsList;
+    this.recipeStepsList = recipeStepsList;
     this.id = id;
   }
 }

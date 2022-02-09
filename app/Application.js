@@ -1,5 +1,5 @@
 ﻿class Application {
-  constructor(window, viewListRecipe, viewRecipe, viewAddRecipe, recipeDAO, apiUrl) {
+  constructor(window, viewListRecipe, viewRecipe, viewAddRecipe, recipeDAO) {
     this.window = window;
 
     this.viewListRecipe = viewListRecipe;
@@ -16,7 +16,7 @@
     this.window.addEventListener("hashchange", () => this.naviguer());
 
     //let recipe = new Recipe("Bouffe américaine", "67mn", "89mn", "Bouffe", "melange fort", null);
-    //this.recipeDAO.add-recipe-function(recipe, () => this.showListRecipe());
+    //this.recipeDAO.addRecipe(recipe, () => this.showListRecipe());
 
     this.naviguer();
   }
@@ -43,7 +43,6 @@
   showNewListRecipe(listRecipe) {
     console.log(listRecipe);
     this.viewListRecipe.initListRecipe(listRecipe);
-    document.getElementById("loader").style.display = "none";
     this.viewListRecipe.render();
   }
 

@@ -11,13 +11,13 @@
   render() {
     document.getElementById("page").innerHTML = this.html;
 
-    document.getElementById("recipe-name-title").innerHTML = this.recipe.name_of_recipe;
+    document.getElementById("recipe-name-title").innerHTML = this.recipe.recipeName;
 
     document.getElementById("recipe-view").innerHTML =
       document.getElementById("recipe-view").innerHTML
-        .replace("{cooking-time}", this.recipe.time_of_preparation)
-        .replace("{baking-time}", this.recipe.time_of_cook)
-        .replace("{ingredients-list}", this.recipe.list_of_ingredients)
-        .replace("{steps-list}", this.recipe.list_of_steps);
+        .replace("{cooking-time}", this.recipe.recipeCookingTime)
+        .replace("{baking-time}", this.recipe.recipeBakingTime)
+        .replace("{ingredients-list}", this.recipe.recipeIngredientsList)
+        .replace("{steps-list}", this.recipe.recipeStepsList);
   }
 }
