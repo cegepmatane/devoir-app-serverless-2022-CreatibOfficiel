@@ -10,7 +10,7 @@
 
   render() {
     document.getElementById("page").innerHTML = this.html;
-    document.getElementById("adding-form").addEventListener("submit", evenement => this.render(evenement));
+    document.getElementById("adding-form").addEventListener("submit", evenement => this.save(evenement));
   }
 
   save(evenement) {
