@@ -1,4 +1,4 @@
-@import url(c:\Users\utilisateur\Documents\DUT\Sem 4\INFONUAGIQUE\devoir-app-serverless-2022-CreatibOfficiel\app\decoration\normalize.css);
+@import url(c:\Users\utilisateur\Documents\DUT\Sem 4\INFONUAGIQUE\devoir-app-serverless-2022-CreatibOfficiel\app\style\normalize.css);
 @font-face {
   font-family: 'BebasNeueRegular';
   src: url("font/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");
@@ -51,6 +51,10 @@ html {
           align-items: center;
   text-align: center;
   background-color: var(--theme-color-bg2);
+  background-image: url("images/logo_nobg@1x.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 300px;
 }
 
 #loader h1 {
@@ -87,6 +91,9 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 1rem;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .button-wrapper .button {
@@ -96,11 +103,15 @@ html {
   border: 0px;
   border-radius: var(--theme-border-radius);
   background: var(--theme-color-red);
-  color: var(--theme-color-text);
+  color: var(--theme-color-bg1);
   text-decoration: none;
   font-family: 'BebasNeueRegular', sans-serif;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.button-wrapper:hover {
+  opacity: 0.8;
 }
 
 #page {
@@ -180,6 +191,9 @@ html {
 
 #page ul li {
   padding: 0.5rem;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 #page ul li a {
@@ -188,6 +202,10 @@ html {
   font-weight: bold;
   text-decoration: none;
   font-family: 'RobotoRegular', sans-serif;
+}
+
+#page ul li:hover {
+  opacity: 0.8;
 }
 
 #page form {
@@ -267,4 +285,4 @@ footer {
 footer p {
   margin: 0;
 }
-/*# sourceMappingURL=application.css.map */
+/*# sourceMappingURL=style.css.map */
