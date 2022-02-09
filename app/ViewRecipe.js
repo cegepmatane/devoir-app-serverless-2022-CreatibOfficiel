@@ -4,7 +4,7 @@
     this.recipe = null;
   }
 
-  initRecipe(recipe) {
+  initializeRecipe(recipe) {
     this.recipe = recipe;
   }
 

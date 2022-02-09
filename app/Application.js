@@ -43,7 +43,7 @@
 
   showNewRecipe(recipe) {
     console.log(recipe);
-    this.viewRecipe.initializeListRecipe(recipe);
+    this.viewRecipe.initializeRecipe(recipe);
     this.viewRecipe.render();
   }
 
